@@ -12,10 +12,13 @@ DigitalOut led1(LED1);
 #define SLEEP_TIME                  500 // (msec)
 #define PRINT_AFTER_N_LOOPS         20
 
+void func3(float f);
+
 void func6(int debugP, int param2)
 {
 	volatile int debug = debugP + param2;
-	MBED_ASSERT(false);
+	// MBED_ASSERT(false);
+    func3((float)debug / 0.0f);
 	while (debug) ;
 }
 
